@@ -1,0 +1,63 @@
+<mvc:View
+    controllerName="com.app.sapfiori.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+>
+    <Table items="{/employee}" alternateRowColors="true" growing="true" growingThreshold="5" growingScrollToLoad="true">
+        <columns>
+            <Column>
+                <header>
+                    <Title text="Employee Name" />
+                </header>
+            </Column>
+        </columns>
+        <columns>
+            <Column>
+                <header>
+                    <Title text="Employee DOB" />
+                </header>
+            </Column>
+        </columns>
+        <columns>
+            <Column>
+                <header>
+                    <Title text="Employee Email" />
+                </header>
+            </Column>
+        </columns>
+        <columns>
+            <Column>
+                <header>
+                    <Title text="Employee Gender" />
+                </header>
+            </Column>
+        </columns>
+        <columns>
+            <Column>
+                <header>
+                    <Title text="Employee Phone" />
+                </header>
+            </Column>
+        </columns>
+        <columns>
+            <Column>
+                <header>
+                    <Title text="Employee Address" />
+                </header>
+            </Column>
+        </columns>
+        <items>
+        <ColumnListItem >
+          <Text text="{fName} {lName}"></Text>
+          <Text text="{DOB}"></Text>
+          <Text text="{email}"></Text>
+          <Text text="{gender}"></Text>
+          <Text text="{phone}"></Text>
+          <Text text="{address/0/city}"></Text>
+        </ColumnListItem>
+        </items>
+    </Table>
+</mvc:View>
