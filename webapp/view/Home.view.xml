@@ -29,24 +29,53 @@
             singleContainerFullSize="false"
         >
             <f:content>
+                <!-- <l:VerticalLayout
+                    id="idVerticalLayout"
+                    binding="{/employee}"
+                >
+                   this is Expression Binding here we applying one field apart from that expression binding is totally depends on condition right...
+                  <Text text="First Name is: {EmployeeName} "></Text>
+                  <Input value="{EmployeeAge}" editable="{= ${EmployeeAge} > 40 ? false : true}"></Input>
+                  <Text text="Contract St Date: {ContractStarted}"></Text>
+                  <Text text="Employee Email: {Email}"></Text>
+                </l:VerticalLayout> -->
+
+
+                <!-- this is for Element Binding... here we can set a overall data name path... -->
+                <!-- <l:VerticalLayout
+                    id="idVerticalLayout"
+                    binding="{/employee}"
+                >
+                    <Input value="{EmployeeName}" />
+                    <Input value="{EmployeeAge}" />
+                    <Input value="{ContractStarted}" />
+                    <Input value="{Email}" />
+                    <Button
+                        text="Submit"
+                        press="onSubmitData"
+                    />
+                </l:VerticalLayout> -->
+
+                
+                <!-- this is for property Binding here we gave the single field(property) path... -->
                 <Label text="Employee Name" />
                 <Input
                     id="name"
-                    value="{/employee/0/fName} {/employee/0/lName}"
+                    value="{/employee/EmployeeName}"
                 />
-
+                
                 <Label text="Employee Age" />
                 <Input
-                    value="{/person/EmployeeAge}"
+                    value="{/employee/EmployeeAge}"
                     type="Number"
                 />
 
                 <Label text="Contract Started" />
-                <DatePicker value="{/employee/0/contractStarted}" />
+                <DatePicker value="{/employee/ContractStarted}" />
 
                 <Label text="Email" />
                 <Input
-                    value="{/person/Email}"
+                    value="{/employee/Email}"
                     type="Email"
                 />
             </f:content>

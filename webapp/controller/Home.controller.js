@@ -19,8 +19,11 @@ sap.ui.define([
                     }
                 }
                 const oJsonModel = new JSONModel(oPerson);
-                this.getView().setModel(oJsonModel, "employeeModel");
-
+                this.getView().setModel(oJsonModel);
             },
+            onSubmitdata: function () {
+                const oModel = this.getView().getModel();
+                const oPerson = oModel.getProperty("/oPerson");
+            }
         });
     });
