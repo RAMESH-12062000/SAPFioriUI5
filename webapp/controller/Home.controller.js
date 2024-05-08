@@ -12,7 +12,7 @@ sap.ui.define([
         return Controller.extend("com.app.sapfiori.controller.Home", {
             onInit: function () {
                 //Here we passing only one user data and optional calling as model coz in the <this.getView().setModel(oJsonModel)> by default its takes..
-                /* const oPerson = {
+                const oPerson = {
                     employee: {
                         EmployeeName: "Ramesh",
                         EmployeeAge: 26,
@@ -24,7 +24,7 @@ sap.ui.define([
                 this.getView().setModel(oJsonModel);
                 //after this you need maitain some Structure in Home.view.xml file for the creating structure at o/p webpage...
                 //for refer this u get clarity==>Employee details trough the sapfiori(notepadfile).
-                */
+                
             }
         });
     });
